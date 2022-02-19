@@ -18,7 +18,7 @@ public class Main {
         String user_name = "Alex";
         System.out.println(user_name);
 
-        boolean isNastyy = false;
+        boolean isNastyy = true;
         System.out.println(isNastyy);
 
 
