@@ -18,8 +18,8 @@ public class Main {
         String user_name = "Alex";
         System.out.println(user_name);
 
-        boolean isNasty = false;
-        System.out.println(isNasty);
+        boolean isNastyyyy = false;
+        System.out.println(isNastyyyy);
 
 
     }
