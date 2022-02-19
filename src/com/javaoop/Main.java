@@ -18,8 +18,8 @@ public class Main {
         String user_name = "Alex";
         System.out.println(user_name);
 
-        boolean isHapppy = true;
-        System.out.println(isHapppy);
+        boolean isMessy = true;
+        System.out.println(isMessy);
 
 
     }
