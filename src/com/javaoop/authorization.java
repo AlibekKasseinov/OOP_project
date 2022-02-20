@@ -15,9 +15,17 @@ public class authorization {
         if (login.equals("Admin") && pass.equals("123456")){
             System.out.println("Successful Authorization");
         }
-        else{
-            System.out.println("Incorrect password or login");
+        else if (login.equals("Admin")){
+            System.out.println("Incorrect password");
         }
+        else if (pass.equals("123456")){
+            System.out.println("Incorrect login");
+        }
+        else{
+            System.out.println("Not found Account. Please register new account");
+        }
+
+
 
 
     }
