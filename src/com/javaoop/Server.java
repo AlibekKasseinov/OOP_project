@@ -12,10 +12,11 @@ public class Server {
     /* Localization of the server side of the Server class */
 
     public static void main(String[] args) throws IOException {
-        ServerSocket server = new ServerSocket(port:8000);
+
+        ServerSocket server = new ServerSocket(port:8000); //Creating a Socket server
         System.out.println("Server started!");
 
-        Socket socket = server.accept();
+        Socket socket = server.accept(); //creating and saving a connection
         System.out.println("Client connected");
 
         BufferedWriter writer =
