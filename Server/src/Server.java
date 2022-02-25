@@ -11,20 +11,20 @@ public class Server {
     public static void main(String[] args) throws IOException {
 
         while (true)
-        try (ServerSocket server = new ServerSocket(port:8000)) //Creating a Socket server
+            try (ServerSocket server = new ServerSocket(port:8000)) //Creating a Socket server
         { System.out.println("Server started!");
             try (
 
-            Socket socket = server.accept(); //creating and saving a connection
+                    Socket socket = server.accept(); //creating and saving a connection
 
-            BufferedWriter writer =
-                    new BufferedWriter(
-                            new OutputStreamWriter(
-                                    socket.getOutputStream()));
-            BufferedReader reader =
-            new BufferedReader (
-                    new InputStreamReader (
-                            socket.getInputStream()));
+                    BufferedWriter writer =
+                            new BufferedWriter(
+                                    new OutputStreamWriter(
+                                            socket.getOutputStream()));
+                    BufferedReader reader =
+                            new BufferedReader (
+                                    new InputStreamReader (
+                                            socket.getInputStream()));
             ) {
                 String request = reader.readLine();
                 System.out.println("Request" + request);
