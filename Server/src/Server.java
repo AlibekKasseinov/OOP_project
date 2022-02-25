@@ -12,7 +12,7 @@ public class Server {
 
         while (true)
             try (ServerSocket server = new ServerSocket(8000)) //Creating a Socket server
-        { System.out.println("Server started!");
+        { System.out.println("The server is running");
             try (
 
                     Socket socket = server.accept(); //creating and saving a connection
@@ -27,13 +27,16 @@ public class Server {
                                             socket.getInputStream()));
             ) {
                 String request = reader.readLine();
-                System.out.println("Request" + request);
-                String response = "Hello from Server" + request.length();
-                System.out.println("Response " + response);
+                System.out.println("Request from: " + request);
+                String response = "From server " + request.length();
+                System.out.println("Response: " + response);
                 writer.write(response);
                 writer.newLine();
                 writer.flush();
+            }catch (NullPointerException e) {
+                e.printStackTrace();
             }
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
