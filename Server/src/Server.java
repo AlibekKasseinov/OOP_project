@@ -11,7 +11,7 @@ public class Server {
     public static void main(String[] args) throws IOException {
 
         while (true)
-            try (ServerSocket server = new ServerSocket(port:8000)) //Creating a Socket server
+            try (ServerSocket server = new ServerSocket(8000)) //Creating a Socket server
         { System.out.println("Server started!");
             try (
 
@@ -35,7 +35,7 @@ public class Server {
                 writer.flush();
             }
         } catch (IOException e) {
-            throw RuntimeException(e);
+            throw new RuntimeException(e);
         }
     }
 }
