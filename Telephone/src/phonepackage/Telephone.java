@@ -3,7 +3,7 @@ package phonepackage;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-
+//Class "Telephone" for "bridge" between Server and Client
 public class Telephone {
 
     private final Socket socket;
@@ -17,11 +17,27 @@ public class Telephone {
             this.writer = createWriter();
     }
 
-    public Telephone(ServerSocket socket){
-        this.socket = server.accept();
-        this.reader = createReader();
-        this.writer = createWriter();
+    public void writeLine (String message){
+        try {
+                writer.write(message);
+                writer.newLine();
+                writer.flush();
+        } catch (IOException e){
+            throw new RuntimeException(e);
+        }
     }
+
+    public String readLine() {
+        try {
+            return reader.readLine();
+        } catch (IOException e){
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
     private BufferedReader createReader(){
 
 
