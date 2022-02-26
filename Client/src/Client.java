@@ -2,7 +2,7 @@ import phonepackage.Telephone;
 
 import java.io.*;
 
-
+// making class Client, which making request for server
 public class Client {
     public static void main(String[] args) {
 
