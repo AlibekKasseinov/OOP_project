@@ -28,7 +28,7 @@ public class Server {
             ) {
                 String request = reader.readLine();
                 System.out.println("Request from: " + request);
-                String response = "From server " + request.length();
+                String response = Math.random() * 30 - 10 + "";
                 System.out.println("Response: " + response);
                 writer.write(response);
                 writer.newLine();
